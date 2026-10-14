@@ -33,6 +33,10 @@ public class Carro {
         return velocidad;
     }
 
+    public int getPotencia(){
+        return potencia;
+    }
+
     public void acelerar () {
         velocidad += potencia;
     }
