@@ -5,17 +5,16 @@ public class Carro {
     private double velocidad;
 
     public Carro(int potencia, double velocidad){
+        /*
         this.potencia = potencia;
         this.velocidad = velocidad;
-    }
-    /*
-    Métodos para ingresar información
-    set()
-    "Siempre" el tipo de retorno es void
-    Siempre recibe un parámetro
-    Parámetro generalmente es del mismo tipo de atributo
-     */
+        */
 
+        setPotencia(potencia);
+        setVelocidad(velocidad);
+    }
+
+    // Setters
     public void setPotencia(int potencia){
         // Se actualiza solo si el dato es correcto
         if (potencia>0)
@@ -25,18 +24,11 @@ public class Carro {
     public void setVelocidad(double velocidad){
         // Se actualiza solo si el dato es correcto sino se setea
         if (velocidad<0)
-             velocidad=0;
+            velocidad=0;
         this.velocidad = velocidad;
     }
 
-    /*
-    Método para sacar información
-    gr()
-    Siempre retorna valor
-    El tipo de retorno generalmente es del mismo del atributo
-     */
-    
-
+    // Getters
     public double getVelocidad(){
         return velocidad;
     }
