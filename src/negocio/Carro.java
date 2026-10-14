@@ -4,15 +4,12 @@ public class Carro {
     private int potencia;
     private double velocidad;
 
-    public Carro(int potencia, double velocidad){
-        /*
-        this.potencia = potencia;
-        this.velocidad = velocidad;
-        */
-
-        setPotencia(potencia);
-        setVelocidad(velocidad);
+    void frenar () {
+        velocidad /=2;
     }
+
+    // Atributos clase
+    private static int numCarros = 0;
 
     // Setters
     public void setPotencia(int potencia){
@@ -41,7 +38,23 @@ public class Carro {
         velocidad += potencia;
     }
 
-    void frenar () {
-        velocidad /=2;
+    // Constructores
+    public Carro(int potencia, double velocidad){
+        /*
+        this.potencia = potencia;
+        this.velocidad = velocidad;
+        */
+
+        setPotencia(potencia);
+        setVelocidad(velocidad);
+        numCarros ++;
+    }
+
+    public Carro(){
+        numCarros ++;
+    }
+
+    public static int getNumCarros(){
+        return numCarros;
     }
 }
