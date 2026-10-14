@@ -57,4 +57,14 @@ public class Carro {
     public static int getNumCarros(){
         return numCarros;
     }
+
+    private static final double IVA = 0.12;
+
+    public static double getIva(){
+        return IVA;
+    }
+
+    public double calcularPrecioventa(double precio){
+        return precio + (precio * IVA);
+    }
 }
